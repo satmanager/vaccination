@@ -17,10 +17,10 @@ imports:
 - path: vm_template.py
 
 resources:
-- name: my-vm
+- name: vaccination
   type: vm_template.py
   properties:
-    zone: southamerica-east1-b	
+    zone: southamerica-east1-b
     startup-script: |
       #!/bin/bash
       sudo apt update
