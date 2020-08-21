@@ -13,4 +13,4 @@ ZONE_TO_RUN.
 
 When ready, deploy with the following command:
 
-    gcloud deployment-manager deployments create vm-startup-script --config vm.yaml
+    gcloud deployment-manager deployments create vm-startup-script --config vm_startup_script/python/vm.yaml

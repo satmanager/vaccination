@@ -25,17 +25,11 @@ resources:
       #!/bin/bash
       sudo apt update
       sudo apt upgrade -y
-      sudo apt install mysql-server
-      sudo systemctl restart mysql
-      sudo apt install build-essential zlib1g-dev libncurses5-dev libgdbm-dev libnss3-dev libssl-dev libreadline-dev libffi-dev curl libbz2-dev -y
-      curl -O https://www.python.org/ftp/python/3.8.5/Python-3.8.5.tar.xz
-      tar -xf Python-3.8.5.tar.xz
-      cd Python-3.8.5
-      ./configure --enable-optimizations
-      make -j 1
-      sudo make altinstall
-      cd
+      sudo apt install mysql-server -y
       mkdir ~/vaccination
       cd ~/vaccination
-      python3.8 -m venv vaccination
-      source vaccination/bin/activate
+      python3 -m venv vaccinationenv
+      source vaccinationenv/bin/activate
+      pip install djangorestframework
+      pip install markdown
+      pip install django-filter

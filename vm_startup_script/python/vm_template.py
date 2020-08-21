@@ -37,7 +37,7 @@ def GenerateConfig(context):
       'zone': context.properties['zone'],
       'machineType': ZonalComputeUrl(
           context.env['project'], context.properties['zone'], 'machineTypes',
-          'f1-micro'),
+          'n1-standard-1'),
       'metadata': {
           'items': [{
               'key': 'startup-script',
@@ -52,7 +52,7 @@ def GenerateConfig(context):
           'initializeParams': {
               'diskName': name_prefix + '-disk',
               'sourceImage': GlobalComputeUrl(
-                  'debian-cloud', 'images', 'family/debian-9'
+                  'debian-cloud', 'images', 'family/debian-10'
                   )
               },
           }],
