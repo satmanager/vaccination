@@ -28,15 +28,12 @@ resources:
       apt-get upgrade -y
       apt-get install wget -y
       apt-get install python3-venv -y
-      mkdir ~/vaccination
-      cd ~/vaccination
+      apt-get install git -y
       python3 -m venv vaccinationenv
+      git clone https://github.com/satmanager/vaccination
       source vaccinationenv/bin/activate
       pip install djangorestframework
       pip install markdown
       pip install django-filter
-      git clone https://github.com/satmanager/vaccination
-      #django-admin startproject vaccination
-      cd vaccination
       #python manage.py migrate
-      python manage.py runserver 0.0.0.0:443
+      python vaccination/vaccination/manage.py runserver 0.0.0.0:443

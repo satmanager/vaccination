@@ -65,9 +65,9 @@ def GenerateConfig(context):
               context.env['project'], 'networks', 'default')
           }],
       'tags': {
-          'items': [{
+          'items': [
               "https-server"
-             }],
+             ],
           }
       }
 
