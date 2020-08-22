@@ -23,9 +23,11 @@ resources:
     zone: southamerica-east1-b
     startup-script: |
       #!/bin/bash
-      sudo apt update
-      sudo apt upgrade -y
-      sudo apt install mysql-server -y
+      #!/bin/bash 
+      apt-get update
+      apt-get upgrade -y
+      apt-get install wget -y
+      apt-get install python3-venv -y
       mkdir ~/vaccination
       cd ~/vaccination
       python3 -m venv vaccinationenv
@@ -33,3 +35,6 @@ resources:
       pip install djangorestframework
       pip install markdown
       pip install django-filter
+      django-admin startproject vaccination
+      cd vaccination
+      python3 manage.py runserver 0.0.0.0:8000
