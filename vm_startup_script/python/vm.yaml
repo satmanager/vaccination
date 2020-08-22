@@ -28,12 +28,18 @@ resources:
       apt-get upgrade -y
       apt-get install wget -y
       apt-get install python3-venv -y
+      apt-get install python3-dev default-libmysqlclient-dev build-essential
       apt-get install git -y
+      apt-get install mariadb-server -y
+      mysql -u root -e 'CREATE DATABASE `vaccination`;'
       python3 -m venv vaccinationenv
       git clone https://github.com/satmanager/vaccination
       source vaccinationenv/bin/activate
       pip install djangorestframework
       pip install markdown
       pip install django-filter
-      #python manage.py migrate
-      python vaccination/vaccination/manage.py runserver 0.0.0.0:443
+      pip install mysqlclient
+      pip install djangorestframework-simplejwt
+      python manage.py migrate
+      python manage.py createsuperuser --email edagardocastro728@gmail.com --username superuser
+      python vaccination/vaccination/manage.py runserver 0.0.0.0:80
