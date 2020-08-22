@@ -35,6 +35,8 @@ resources:
       pip install djangorestframework
       pip install markdown
       pip install django-filter
-      django-admin startproject vaccination
+      git clone https://github.com/satmanager/vaccination
+      #django-admin startproject vaccination
       cd vaccination
-      python3 manage.py runserver 0.0.0.0:443
+      #python manage.py migrate
+      python manage.py runserver 0.0.0.0:443

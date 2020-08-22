@@ -63,7 +63,12 @@ def GenerateConfig(context):
               }],
           'network': GlobalComputeUrl(
               context.env['project'], 'networks', 'default')
-          }]
+          }],
+      'tags': {
+          'items': [{
+              "https-server"
+             }],
+          }
       }
 
   # Resources to return.
