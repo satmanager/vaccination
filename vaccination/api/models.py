@@ -10,9 +10,9 @@ class Drug(models.Model):
         return self.name
 
 class Vaccination(models.Model):
-    rut = models.CharField(max_length=8)
+    rut = models.CharField(max_length=9)
     dose = models.FloatField(validators=[MinValueValidator(0.15),MaxValueValidator(1.0)])
     date = models.DateField()
-    drug = models.ForeignKey(Drug, on_delete=models.RESTRICT)
+    drug = models.ForeignKey(Drug, related_name='drugs', on_delete=models.RESTRICT)
     def __str__(self):
         return self.name        

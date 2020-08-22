@@ -41,5 +41,5 @@ resources:
       pip install mysqlclient
       pip install djangorestframework-simplejwt
       python manage.py migrate
-      python manage.py createsuperuser --email edagardocastro728@gmail.com --username superuser
+      python manage.py createsuperuser --email edgardocastro728@gmail.com --username superuser
       python vaccination/vaccination/manage.py runserver 0.0.0.0:80
