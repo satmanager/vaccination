@@ -66,7 +66,7 @@ def GenerateConfig(context):
           }],
       'tags': {
           'items': [
-              "https-server"
+              "http-server"
              ],
           }
       }
