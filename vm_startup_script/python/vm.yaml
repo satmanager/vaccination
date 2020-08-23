@@ -43,5 +43,5 @@ resources:
       python vaccination/vaccination/manage.py migrate
       #python vaccination/vaccination/manage.py createsuperuser --email edgardocastro728@gmail.com --username superuser
       python manage.py syncdb --noinput
-      echo "from django.contrib.auth.models import User; User.objects.create_superuser('superuser', 'edgardocastro728@gmail.com', 'superuser')" | python manage.py shell    
+      echo "from django.contrib.auth.models import User; User.objects.create_superuser('superuser', 'edgardocastro728@gmail.com', 'superuser')" | vaccination/vaccination/python manage.py shell    
       python vaccination/vaccination/manage.py runserver 0.0.0.0:80
