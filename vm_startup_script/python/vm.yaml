@@ -28,7 +28,7 @@ resources:
       apt-get upgrade -y
       apt-get install wget -y
       apt-get install python3-venv -y
-      apt-get install python3-dev default-libmysqlclient-dev build-essential
+      apt-get install python3-dev default-libmysqlclient-dev build-essential -y
       apt-get install git -y
       apt-get install mariadb-server -y
       mysql -u root -e 'CREATE DATABASE `vaccination`;'
