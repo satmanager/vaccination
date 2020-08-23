@@ -25,7 +25,7 @@ class Migration(migrations.Migration):
             name='Vaccination',
             fields=[
                 ('id', models.AutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('rut', models.CharField(max_length=8)),
+                ('rut', models.CharField(max_length=9)),
                 ('dose', models.FloatField()),
                 ('date', models.DateField()),
                 ('drug', models.ForeignKey(on_delete=django.db.models.deletion.RESTRICT, to='api.drug')),
